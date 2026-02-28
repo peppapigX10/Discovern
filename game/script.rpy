@@ -1,11 +1,12 @@
-﻿define you = Character("Psychologist")
+﻿define you = Character("Dr. [name]")
 
 label start:
-
     scene main_room
 
-    show you
+    $ name = renpy.input("Type your name: ")
+    you "Hello, you are a psychologist at the hospital Discovern."
 
-    you "Hello, I[you] are a psychologist at the hospital."
+    show you at right
+    
 
     return
